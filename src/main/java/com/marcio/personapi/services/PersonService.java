@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.marcio.personapi.domain.Person;
 import com.marcio.personapi.dto.PersonDTO;
+import com.marcio.personapi.exceptions.PersonNotFoundException;
 import com.marcio.personapi.repositories.PersonRepository;
 
 @Service
@@ -49,5 +50,4 @@ public class PersonService {
 	private PersonDTO toPersonDTO(Person person) {
 		return modelMapper.map(person, PersonDTO.class);
 	}
-
 }
